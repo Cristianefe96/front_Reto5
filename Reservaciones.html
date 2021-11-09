@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Reservaciones</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="misEstilos.css">
+    <script type="text/javascript" src="js/Reservacion.js"></script>
+</head>
+<body>
+    <header id="cabeceralogo">
+        <div>
+           <h1>Reservaciones </h1>
+        </div>
+    </header>
+    <nav id="menuprincipal">
+        <div>
+        <ul>
+           <li><a href="index.html">Principal</a></li>
+           <li><a href="Reportes.html">Reportes</a></li>
+           <li><a href="Category.html">Categoria</a></li>
+           <li><a href="Clientes.html">Clientes</a></li>
+           <li><a href="Mensajes.html">Mensajes</a></li>
+           <li><a href="Reservaciones.html">Reservaciones</a></li>
+        <li><a href="Bike.html">Bike</a></li>
+        </ul>
+        </div>
+    </nav>
+     
+    <label>STARTDATE: Escoja la Fecha Inicio de la Reservacion</label>
+        <input class="controlReservation" type="date" id="startDate" placeholder="startDate"><br>
+    <label>DEVOLUTIONDATE: Escoja la Fecha Devolucion de la Reservacion</label>
+        <input class="controlReservation" type="date" id="devolutionDate" placeholder="devolutionDate"><br>
+    <label>STATUS: Estado de la Reservacion "completed / cancelled</label>
+       <input class="controlReservation" type="text" id="status" placeholder="escriba completed o cancelled">
+    
+    <select id="select-client"></select>
+        <script type="text/javascript">
+            window.onload = autoInicioRelacionCliente();
+        </script>
+            <select id="select-Bike"></select>
+            <script type="text/javascript">
+                window.onload = autoInicioBike();
+            </script>
+     <button onclick=" agregarReservation()">Guardar Reservacion</button>
+    
+     <div id="miListaReservation"></div>
+
+
+</body>
+</html>
